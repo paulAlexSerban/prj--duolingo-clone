@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 62.5%;
+  color: $c-text;
+}
+
+#root {
+  max-width: 450px;
+  margin: ($gutter * 2) auto;
+  padding: 0 ($baseline * 2);
+}
