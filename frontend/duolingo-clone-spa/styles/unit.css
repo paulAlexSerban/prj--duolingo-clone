@@ -1,0 +1,33 @@
+h2,
+h3 {
+  margin: 0.2em;
+}
+
+.unit__header {
+  margin-left: 22rem;
+  padding: 1rem 0;
+  background-color: #52489c;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lessons__container {
+  margin: 3em;
+  margin-left: 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.disable {
+  background-color: #bebebe;
+}
+
+.finished {
+  background-color: #59c759;
+}
