@@ -6,6 +6,7 @@ import Learn from './routes/Learn';
 import Profile from './routes/Profile';
 import Settings from './routes/Settings';
 import ErrorPage from './components/ErrorPage';
+import Lesson from './routes/Lesson';
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
           { index: true, element: <Learn /> },
+          {path: "/lesson/:lessonId", element: <Lesson />},
           { path: "/profile", element: <Profile /> },
           { path: "/settings", element: <Settings /> }
         ]

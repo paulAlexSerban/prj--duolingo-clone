@@ -8,8 +8,8 @@ const SideBarNav = () => {
       <h1>Netlingo</h1>
       <nav>      <ul>
         <li> <NavLink to="/">Learn</NavLink> </li>
-        <li> <NavLink to="/profile">Profile</NavLink> </li>
-        <li> <NavLink to="/settings">Settings</NavLink> </li>
+        <li> <NavLink to="profile">Profile</NavLink> </li>
+        <li> <NavLink to="settings">Settings</NavLink> </li>
       </ul></nav>
     </div>
   )

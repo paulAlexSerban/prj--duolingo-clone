@@ -38,8 +38,10 @@ button:active {
   width: 100%;
 }
 
+.unit__container, 
 .learn__container,
 .profile__container,
-.settings__container {
+.settings__container,
+.exercise__container {
   margin-left: 24rem;
 }

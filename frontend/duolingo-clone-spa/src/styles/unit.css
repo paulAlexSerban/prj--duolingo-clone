@@ -3,9 +3,16 @@ h3 {
   margin: 0.2em;
 }
 
+#unit__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .unit__header {
-  margin-left: 22rem;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   background-color: #52489c;
   border-radius: 15px;
   color: white;
@@ -13,11 +20,11 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .lessons__container {
   margin: 3em;
-  margin-left: 22rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
