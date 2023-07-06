@@ -1,6 +1,10 @@
-import "../../styles/lessonmodule.css";
+import * as React from "react";
 import { NavLink } from "react-router-dom";
+import CheckedIcon from "../../assets/checked.svg";
+import "../../styles/lessonmodule.css";
+
 interface lessonModuleProps {
+  unitId: number;
   lesson: {
     id: number;
     title: string;
@@ -11,20 +15,32 @@ interface lessonModuleProps {
   };
 }
 
-
-const LessonModule = ({ lesson }: lessonModuleProps) => {
-  return <div className="lesson_module__container">
-    <div>
-      <img src={lesson.avatar} alt="image avatar" />
-    </div>
-    <div>
-      <div className="heading">
-        <h1>{lesson.title}</h1>
+const LessonModule = ({ unitId, lesson }: lessonModuleProps) => {
+  return (
+    <div className="lesson_module__container">
+      <div>
+        <img src={lesson.avatar} alt="lesson" />
       </div>
-      <p>{lesson.description}</p>
-      <NavLink to={`lesson/${lesson.id}`} className={lesson.enabled ? "enabled" : "disabled"}>Start</NavLink>
+      <div>
+        <div className="heading">
+          <h1>{lesson.title}</h1>
+          {lesson.finished && <img src={CheckedIcon} alt="checked" />}
+        </div>
+        <p>{lesson.description}</p>
+        <NavLink
+          to={`unit/${unitId}/lesson/${lesson.id}`}
+          onClick={(e) => {
+            if (!lesson.enabled) {
+              e.preventDefault();
+            }
+          }}
+          className={lesson.enabled ? "enabled" : "disabled"}
+        >
+          Start
+        </NavLink>
+      </div>
     </div>
-  </div>
-}
+  );
+};
 
 export default LessonModule;

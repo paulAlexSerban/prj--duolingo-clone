@@ -39,9 +39,10 @@ button:active {
 }
 
 .unit__container, 
-.learn__container,
+#learn__container,
 .profile__container,
 .settings__container,
-.exercise__container {
+
+.lesson__container {
   margin-left: 24rem;
 }

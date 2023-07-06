@@ -1,18 +1,43 @@
-
-import "../styles/sidebarnav.css";
+import React from "react";
 import { NavLink } from "react-router-dom";
+import "../styles/sidebarnav.css";
+import StatusBar from "./StatusBar";
 
-const SideBarNav = () => {
+const SideNavBar = () => {
   return (
     <div id="sidebar">
       <h1>Netlingo</h1>
-      <nav>      <ul>
-        <li> <NavLink to="/">Learn</NavLink> </li>
-        <li> <NavLink to="profile">Profile</NavLink> </li>
-        <li> <NavLink to="settings">Settings</NavLink> </li>
-      </ul></nav>
+      <nav>
+        <ul>
+          <li>
+            <NavLink
+              to={`/`}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Learn
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={`profile`}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Profile
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={`settings`}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Settings
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+      <StatusBar />
     </div>
-  )
-}
+  );
+};
 
-export default SideBarNav;
+export default SideNavBar;
