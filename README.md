@@ -1,1 +1,2 @@
-# JS-MVC-ToDo-List-App
+# Duolingo Clone
+> React workshop coursework
